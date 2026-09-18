@@ -1,5 +1,10 @@
 """Tests for the regular expression scanner and recognizer.
 
+Charles Meyers
+CMPS 450 -- Professor Maida
+Project 1: Implementing a Scanner, Recognizer, and Parser for Regular Expressions
+Due: October 14, 2026
+
 Run with::
 
     python3 -m unittest -v test_recognizer.py

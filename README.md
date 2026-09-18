@@ -1,6 +1,8 @@
 # Scanner and Recognizer for Regular Expressions
 
-CMPS 450 — Project 1. A recursive descent **recognizer** for regular
+Charles Meyers — CMPS 450, Professor Maida — Project 1 — due October 14, 2026
+
+A recursive descent **recognizer** for regular
 expressions that prints a concrete syntax tree *without building one*.
 
 A recognizer only decides whether its input is grammatical. It can still print
