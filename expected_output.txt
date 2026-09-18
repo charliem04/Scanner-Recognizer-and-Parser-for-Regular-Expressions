@@ -1,0 +1,139 @@
+Processing expression: "two"
+RE
+    S_RE
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    t CHAR
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    w CHAR
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    o CHAR
+
+Processing expression: "t|w|o"
+RE
+    S_RE
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    t CHAR
+    | VERT
+    S_RE
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    w CHAR
+    | VERT
+    S_RE
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    o CHAR
+
+Processing expression: "[two]"
+RE
+    S_RE
+        B_RE
+            E_RE
+                [ LPOSSET
+                SITEMS
+                    CHAR_OR_META
+                        t CHAR
+                    CHAR_OR_META
+                        w CHAR
+                    CHAR_OR_META
+                        o CHAR
+                ] RSET
+
+Processing expression: "[^two]"
+RE
+    S_RE
+        B_RE
+            E_RE
+                [^ LNEGSET
+                SITEMS
+                    CHAR_OR_META
+                        t CHAR
+                    CHAR_OR_META
+                        w CHAR
+                    CHAR_OR_META
+                        o CHAR
+                ] RSET
+
+Processing expression: "t(oo?|wo)"
+RE
+    S_RE
+        B_RE
+            E_RE
+                CHAR_OR_META
+                    t CHAR
+        B_RE
+            E_RE
+                ( LPAREN
+                RE
+                    S_RE
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    o CHAR
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    o CHAR
+                            ? QMARK
+                    | VERT
+                    S_RE
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    w CHAR
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    o CHAR
+                ) RPAREN
+
+Processing expression: "(\<(/?[^\>]+)\>)"
+RE
+    S_RE
+        B_RE
+            E_RE
+                ( LPAREN
+                RE
+                    S_RE
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    \ BSLASH
+                                    < LANGLE
+                        B_RE
+                            E_RE
+                                ( LPAREN
+                                RE
+                                    S_RE
+                                        B_RE
+                                            E_RE
+                                                CHAR_OR_META
+                                                    / CHAR
+                                            ? QMARK
+                                        B_RE
+                                            E_RE
+                                                [^ LNEGSET
+                                                SITEMS
+                                                    CHAR_OR_META
+                                                        \ BSLASH
+                                                        > RANGLE
+                                                ] RSET
+                                            + PLUS
+                                ) RPAREN
+                        B_RE
+                            E_RE
+                                CHAR_OR_META
+                                    \ BSLASH
+                                    > RANGLE
+                ) RPAREN
+
