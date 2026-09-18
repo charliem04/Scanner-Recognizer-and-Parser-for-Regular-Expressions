@@ -1,6 +1,9 @@
 """Recursive descent recognizer for regular expressions.
 
-CMPS 450 -- Project 1.
+Charles Meyers
+CMPS 450 -- Professor Maida
+Project 1: Implementing a Scanner, Recognizer, and Parser for Regular Expressions
+Due: October 14, 2026
 
 A recognizer only decides whether its input is grammatical; it does not build
 a parse tree.  It can nevertheless *print* one, because the call graph of a
